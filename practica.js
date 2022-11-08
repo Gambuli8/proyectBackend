@@ -34,7 +34,7 @@ function mostrarLetras (palabra, timer){
     let counter = 0;
     function letras(){
         if(counter != palabra.length){
-            console.log(palabra.slice(counter, counter + 1));
+            //console.log(palabra.slice(counter, counter + 1));
             counter++;
         }else{
             fin();
@@ -45,4 +45,24 @@ function mostrarLetras (palabra, timer){
 
 let fin = () => console.log('finaliza la ejecucion!.');
 
-mostrarLetras('Geronimo', 1000);
+//mostrarLetras('Geronimo', 1000);
+
+
+
+for (let i = 0; index < 10000; i++) {
+    let num_random = Math.round((Math.random() * (20 - 1)));
+    response[num_random] = response[num_random] ? response[num_random] + 1 : 1;
+}
+//console.log(reponse);
+
+
+const productos = [
+    { id:1, nombre:'Escuadra', precio:323.45 },
+    { id:2, nombre:'Calculadora', precio:234.56 },
+    { id:3, nombre:'Globo Terráqueo', precio:45.67 },
+    { id:4, nombre:'Paleta Pintura', precio:456.78 },
+    { id:5, nombre:'Reloj', precio:67.89 },
+    { id:6, nombre:'Agenda', precio:78.90 }
+]
+
+
