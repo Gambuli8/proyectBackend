@@ -1,19 +1,16 @@
 let express = require("express");
-const PORT = 3001;
+const PORT = 8080;
+let productos = require("./products.txt");
 let app = express();
-
-let visitas = 0;
 
 app.get("/", (req, res, next) => {
     res.send(`<h1 style="color:blue"> Bienvenido </h1>`)
 });
-app.get("/visitas", (req, res, next) => {
-    visitas++;
-    res.send(`total visitas ${visitas}`);
+app.get("/products", (req, res, next) => {
+    res.send(`productos ${productos}`);
 });
-app.get("/fyh", (req, res, next) => {
-    let hora = moment().format("L");
-    res.send(`hola estoy en el metodo ${req.method}`)
+app.get("/productoRandom", (req, res, next) => {
+    res.send(`el producto al azar es ${productos}`)
 });
 
 app.listen(PORT, () => console.log(`server on http://localhost:${PORT}`) );
